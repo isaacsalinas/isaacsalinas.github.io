@@ -409,15 +409,25 @@ function playerFrictionAndGravity() {
   }
 }
 
+var image = new Image();
+
+image.src = "https://i.imgur.com/eWh9Dkg.png";
+
+image.onload = function() {
+  drawPlatforms();
+};
+
+image.onerror = function() {
+  console.error("Failed to load image");
+};
+
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "grey";
-    ctx.fillRect(
-      platforms[i].x,
-      platforms[i].y,
-      platforms[i].width,
-      platforms[i].height
-    );
+    var platform = platforms[i];
+    var pattern = ctx.createPattern(image, "repeat");
+
+    ctx.fillStyle = pattern;
+    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
   }
 }
 

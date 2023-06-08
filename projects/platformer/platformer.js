@@ -43,11 +43,32 @@ $(function () {
     //////////ONLY CHANGE BELOW THIS POINT///////////
     /////////////////////////////////////////////////
 
+
+
     // TODO 1
     // Create platforms
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
 
+    //Main starting platforms
+createPlatform(0, 600, 100, 35);
+createPlatform(1365, 625, 100, 35);
+
+// Mini pixel platforms
+createPlatform(0, 461, 1, 1)
+createPlatform(0, 322, 1, 1)
+createPlatform(0, 183, 1, 1)
+createPlatform(0, 44, 1, 1)
+ 
+// other platforms
+createPlatform(300, 500, 20, 20)
+createPlatform(400, 400, 20, 20)
+createPlatform(500, 300, 20, 20)
+createPlatform(700, 200, 10, 10)
+
+//other platforms part 2
+createPlatform(1150, 500, 2, 2)
+createPlatform(985, 375, 2, 2)
 
 
     
@@ -56,6 +77,11 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
+
+    createCollectable('coin', 1360, 570);
+    createCollectable('coin', 0, 0 )
+    createCollectable("coin", 685, 150)
+    createCollectable("coin", 967, 330)
 
 
 
@@ -67,8 +93,10 @@ $(function () {
     // example usage: createCannon(side, position, delay, width, height)
 
 
-
-
+    createCannon("right", 750, 1000); 
+    createCannon("right", 80, 500)
+    createCannon("right", 400, 2000)
+    
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
